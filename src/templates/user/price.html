@@ -1,0 +1,27 @@
+{% extends 'userindex.html'%}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">CAR</th>
+      <th scope="col">PRICE</th>
+      <th scope="col">DATE</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[2]}} {{i[3]}}&nbsp;</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>&nbsp;{{i[1]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td><a class="btn btn-info" href="/priceinfo_user1?id={{i[0]}}&cid={{i[6]}}">View Price</a> </td>
+
+      {% if i[8]=='verified' %}
+      <td><a class="btn btn-primary" href="acceptbyuser?id={{i[0]}}">Accept Price</a></td>
+      {%endif%}
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+{% endblock %}

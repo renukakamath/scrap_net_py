@@ -1,0 +1,52 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'userindex.html'%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="carcode">
+  <center><h3><u></u></h3></center>
+  <table width="200" border="1" align="center" id="customers">
+    <tr>
+      <th>car model :</th>
+      <td><label>
+        <input type="text" name="textfield" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>engine number :</th>
+      <td><label>
+        <input type="text" name="textfield2" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>chases number :</th>
+      <td><label></label>
+        <label>
+        <input type="text" name="textfield3" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>seater :</th>
+      <td><label>
+        <input type="text" name="textfield4" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>register number :</th>
+      <td><label>
+        <input type="text" name="textfield5" />
+      </label></td>
+    </tr>
+  </table>
+  <br>
+  <div align="center">
+    <input name="submit" type="submit" value="Add" align="center" class="btn btn-outline-secondary" />
+  </div>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

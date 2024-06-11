@@ -1,0 +1,99 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'scrapindex.html'%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="cerinfocode" enctype="multipart/form-data">
+    <script type="text/javascript">
+
+function printSelection(node){
+
+    var content=node.innerHTML
+    var pwin=window.open('','print_content','width=800,height=800');
+
+    pwin.document.open();
+    pwin.document.write('<html><body onload="window.print()">'+content+'</body></html>');
+    pwin.document.close();
+
+    setTimeout(function(){pwin.close();},1000);
+}
+</script>
+<!--<style type="text/css">-->
+<!--#form1 #printtb table tr td strong {-->
+	<!--font-size: large;-->
+	<!--font-family: Georgia, "Times New Roman", Times, serif;-->
+<!--}-->
+<!--#form1 #printtb table tr td {-->
+	<!--font-size: x-large;-->
+<!--}-->
+<!--#form1 #printtb table tr td {-->
+	<!--font-size: larger;-->
+<!--}-->
+<!--#form1 #printtb table tr td {-->
+	<!--font-size: xx-large;-->
+<!--}-->
+<!--#form1 #printtb table tr td {-->
+	<!--font-family: Verdana, Geneva, sans-serif;-->
+<!--}-->
+<!--#form1 #printtb table tr td {-->
+	<!--font-family: Georgia, "Times New Roman", Times, serif;-->
+	<!--font-size: large;-->
+<!--}-->
+<!--</style>-->
+
+<form id="form1" name="form1" method="post" action="/cerinfocode">
+
+  <div  id="printtb">
+    <table width="631" border="0" align="center">
+
+      <tr>
+        <td colspan="2" align="center"> <h1>Scrap Certificate</h1> </td>
+      </tr>
+
+
+      <tr>
+        <td  colspan="2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p align="justify"  style="line-height: 1.8;"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to certify that the vehicle  has been scrapped .The vehicle can no longer be
+used on road or re-assembled into a vehicle.Where it has been certified by that Vehicle Model </i></p>
+          <p align="justify"  style="line-height: 1.8;" > </p>
+          <div align="center"><b>{{val[0]}}</b> Reg No <b>{{val[5]}}</b><i> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</i></div>
+          <p align="justify"  style="line-height: 1.8;"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is receive to Scrap deler <b>{{val[3]}} {{val[4]}}</b> </i></p>
+
+
+
+          <p></p>
+          <p align="justify"  style="line-height: 1.8;"></p>
+
+          <p></p>
+          <p align="justify"  style="line-height: 1.8;"><i><br />
+          </i></p></td>
+      </tr>
+      <tr>
+        <td width="266">&nbsp;</td>
+        <td width="224">&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+
+    </table>
+  </div>
+
+  <p align="center">
+    <strong>
+    <input type="submit" name="button" id="button" value="SAVE " onclick="printSelection(document.getElementById('printtb'));return false" />
+  </strong>  </p>
+
+
+  <center><input type="submit" name="Submit" value="Submit" align="center" class="btn btn-outline-secondary"/></center>
+
+</form>
+</body>
+<!--</html>-->
+{% endblock %}
